@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
-//testando
+
 #define SEALEVELPRESSURE_HPA (1013.25)
  
 Adafruit_BME280 bme;
