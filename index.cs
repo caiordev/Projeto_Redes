@@ -6,7 +6,7 @@
 #include <Adafruit_BME280.h>
 
 #define SEALEVELPRESSURE_HPA (1013.25)
- 
+ //teste
 Adafruit_BME280 bme;
  
 float temperatura, umidade, pressao, altitude;
