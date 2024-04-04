@@ -8,7 +8,7 @@
 #define SEALEVELPRESSURE_HPA (1013.25)
  
 Adafruit_BME280 bme;
- 
+ //jksnfksnkfs
 float temperatura, umidade, pressao, altitude;
  
 // Nome da rede e senha para conexão
