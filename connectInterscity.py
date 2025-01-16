@@ -172,6 +172,6 @@ def addData_API(uuid_resource):
       content = json.loads(r.text)
       print(json.dumps(content, indent=2, sort_keys=True))
     else:
-      print('Status code: '+str(r.status_code))
+      print('Status codee: '+str(r.status_code))
 
     return True
