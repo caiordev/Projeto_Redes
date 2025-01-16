@@ -13,7 +13,7 @@ def connect_mqtt():
         if rc == 0:
             print("Conectado ao Broker MQTT")
         else:
-            print("Falha ao conectar, código de retorno %d\n", rc)
+            print("Falha ao conectar, código de retornoo %d\n", rc)
 
     client = mqtt_client.Client(client_id)
     client.on_connect = on_connect
