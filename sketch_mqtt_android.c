@@ -126,7 +126,7 @@ void reconnect() {
             Serial.println("Conectado ao broker MQTT!");
             client.subscribe(topic);
         } else {
-            Serial.print("Falha na conexão: ");
+            Serial.print("Falha na conexãoo: ");
             Serial.print(client.state());
             delay(2000);
         }
