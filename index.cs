@@ -1,4 +1,4 @@
-// Bibliotecas necessárias para o Projeto
+// Bibliotecas necessÃ¡rias para o Projeto
 #include <WiFi.h>
 #include <WebServer.h>
 #include <Wire.h>
@@ -8,16 +8,16 @@
 #define SEALEVELPRESSURE_HPA (1013.25)
  
 Adafruit_BME280 bme;
- //jksnfksnkfs
+ //jksnfksnkf
 float temperatura, umidade, pressao, altitude;
  
-// Nome da rede e senha para conexão
+// Nome da rede e senha para conexÃ£o
 const char* ssid     = "Teste de Rede";             
 const char* senha    = "SENHA";                     
  
 WebServer server(80);
  
-// Informações de acesso para rede de internet / IP Fixo
+// InformaÃ§Ãµes de acesso para rede de internet / IP Fixo
 IPAddress local_IP(192, 168, 0, 100);
 IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
@@ -38,7 +38,7 @@ void setup() {
   Serial.println("Conectando a ");
   Serial.println(ssid);
  
-  //Conecta à Rede Wifi indicada anteriormente
+  //Conecta Ã  Rede Wifi indicada anteriormente
   WiFi.begin(ssid, senha);
  
   while (WiFi.status() != WL_CONNECTED) {
@@ -74,15 +74,15 @@ void handle_NotFound() {
   server.send(404, "text/plain", "Not found");
 }
  
-// Informações da página Web criada
+// InformaÃ§Ãµes da pÃ¡gina Web criada
 String SendHTML(float temperatura, float umidade, float pressao, float altitude) {
   String ptr = "<!DOCTYPE html> <html>\n";
   ptr += "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n";
  
-// Título da Guia da Web.
+// TÃ­tulo da Guia da Web.
   ptr += "<title>ESP32 + BME280</title>\n";
  
-  // Configurações de cor e padrões de exibição
+  // ConfiguraÃ§Ãµes de cor e padrÃµes de exibiÃ§Ã£o
   ptr += "<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}\n";
   ptr += "body{margin-top: 50px;} h1 {color: #444444;margin: 50px auto 30px;}\n";
   ptr += "p {font-size: 24px;color: #444444;margin-bottom: 10px;}\n";
@@ -91,25 +91,25 @@ String SendHTML(float temperatura, float umidade, float pressao, float altitude)
   ptr += "<body>\n";
   ptr += "<div id=\"webpage\">\n";
  
-  // Título impresso na Página Web Criada
+  // TÃ­tulo impresso na PÃ¡gina Web Criada
   ptr += "<h1>ESP32 + BME280</h1>\n";
  
-  // Informações de Temperatura
+  // InformaÃ§Ãµes de Temperatura
   ptr += "<p>Temperatura: ";
   ptr += temperatura;
   ptr += "&deg;C</p>";
  
-  // Informações de Umidade
+  // InformaÃ§Ãµes de Umidade
   ptr += "<p>Umidade: ";
   ptr += umidade;
   ptr += "%</p>";
  
-  // Informações de Pressão
+  // InformaÃ§Ãµes de PressÃ£o
   ptr += "<p>Pressao: ";
   ptr += pressao;
   ptr += "hPa</p>";
  
-  // Informações de altitude
+  // InformaÃ§Ãµes de altitude
  
   ptr += "<p>Altitude: ";
   ptr += altitude;
